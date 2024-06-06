@@ -1,0 +1,79 @@
+@import '../../SCSS/vars';
+@mixin text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+.posts {
+  &__title--main {
+    text-align: center;
+  }
+  &-list{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  &__card {
+    background-color: $lightGray;
+    position: relative;
+    border-radius: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color .3s linear;
+  }
+  &__card:hover {
+    background-color: $mediumGray;
+  }
+  &__btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  &__heart {
+    width: 25px;
+    height: 25px;
+    stroke: red;
+    fill: red;
+    transition: fill .3s linear, stroke .3s linear;
+  }
+  &__heart:hover {
+    fill: rgb(199, 41, 41);
+    stroke: rgb(199, 41, 41);
+  }
+  &__title {
+    @include text;
+    max-width: 300px;
+  }
+  &__desc {
+    max-width: 360px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 58px;
+  }
+  &__delete {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: stroke .3s linear;
+  }
+  &__delete:hover {
+    stroke: $darkGray;
+  }
+  &__count {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+  &__like {
+    display: block;
+    font-size: 18px;
+    color: red;
+  }
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import './vars';
+html {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  background-color: $white;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  color: $black;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 12px;
+  width: 100%;
+  max-width: 1280px;
+}
